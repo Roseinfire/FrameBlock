@@ -1,5 +1,5 @@
 # FrameBlock
-Chrome Extension Block frames on Websites
+## Chrome Extension which block frames.
 # Usage
 * Download Zip Code
 * Exract Folder
