@@ -4,7 +4,7 @@
 * Download Zip Code
 * Exract Folder
 * Open Google Chrome
-* Go to chrome://settings
+* Go to chrome://extensions
 * Enable Developer Mode
 * Click Load 'Unpacked Extension'
 * Select Extracted Folder
