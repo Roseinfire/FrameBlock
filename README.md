@@ -10,7 +10,7 @@
 * Select Extracted Folder
 ### Ready, now go to the internet!
 # Conception
-Stupid advertisment always use the same patterns.
+Stupid advertisment always use the same patterns. <br>
 Even more, some of that methods now always used by stupid avdertisment. <br>
 That's what why created FrameBlock. Just remove patterns. <br>
 FrameBlock is not an adBlock, but it blocks most of heavy and harmful advertisments. <br>
@@ -23,6 +23,6 @@ So, some sites will work uncorrectly:
   * Google Drive
   * Github
   * Lichess
-Their content become less interactive or less usefull.
-Google Drive unable to download files, Github will not show icons.
+<br>Their content become less interactive or less usefull.
+<br>Google Drive unable to download files, Github will not show icons.
 ### It's best to disable FrameBlock on Trusted Sites, but keep enabled by default.
