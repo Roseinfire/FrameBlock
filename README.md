@@ -11,7 +11,7 @@
 ### Ready, now go to the internet!
 # Conception
 Stupid advertisment always use the same patterns. <br>
-Even more, some of that methods now always used by stupid avdertisment. <br>
+Far more, some of that methods are always used only by stupid avdertisment. <br>
 That's what why created FrameBlock. Just remove patterns. <br>
 FrameBlock is not an adBlock, but it blocks most of heavy and harmful advertisments. <br>
 Recommended usage is enable extension when you want quickly read or download information.
