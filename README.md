@@ -17,7 +17,7 @@ FrameBlock is not an adBlock, but it blocks most of heavy and harmful advertisme
 Recommended usage is enable extension when you want quickly read or download information.
 # Dark side
 As explained above, FrameBlock does not block the advertisment. <br>
-It blocks patterns, which potencialy harmful. <br>
+It blocks patterns, which potencially harmful. <br>
 So, some sites will work uncorrectly: 
   * Youtube
   * Google Drive
