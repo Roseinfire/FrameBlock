@@ -1,30 +1,26 @@
+var methods = new Array()
 setInterval(function block() {
-   var fs = []
-   var iframes = document.getElementsByTagName("iframe")
-   var frames = document.getElementsByTagName("frame")
-   var links = document.getElementsByTagName("a")
-   var yatags = document.getElementsByTagName("yatag")
-   var roots = document.body.children
-   for(var i = 0; i < iframes.length; i++) { 
-     fs.push(iframes[i]); iframes[i].parentElement.removeChild(iframes[i]);
-     }
-   for(var i = 0; i < frames.length; i++) {
-     fs.push(frames[i]); frames[i].parentElement.removeChild(frames[i]);
-     };
-   for(var i = 0; i < links.length; i++) {
-     if(links[i].getElementsByTagName("img").length || links[i].getElementsByTagName("video").length) {
-     fs.push(links[i]); links[i].parentElement.removeChild(links[i]);
+   var blocked = new Array()
+   function remove(tag, filter=function() {}) {
+      var things; (typeof tag == 'string') ? things = document.getElementsByTagName(tag) : things = tag
+      for(var i = 0; i < things.length; i++) {
+         if(filter(things[i])) { things[i].parentElement.removeChild(things[i]); blocked.push(things[i]) }
+          }
+      }
+   for(var i = 0; i < methods.length; i++) {
+      remove(methods[i].tag, methods[i].filter)
+    }; if(blocked.length) { console.log("frames blocked > ", blocked) }
+ }, 80)
+  methods.push({ tag: 'frame', filter: function(e) { return true } })
+  methods.push({ tag: 'iframe', filter: function(e) { return true } })  
+  methods.push({ tag: 'yatag', filter: function(e) { return true } })
+  methods.push({ tag: 'a', filter: function(e) { 
+    if(e.getElementsByTagName("img").length || e.getElementsByTagName("video").length) {
+     return true
         }
-     };
-    for(var i = 0; i < yatags.length; i++) {
-       fs.push(yatags[i]); yatags[i].parentElement.removeChild(yatags[i]);
-     };
-    for(var i = 0; i < roots.length; i++) { 
-      var dv = roots[i]
-             if(dv.shadowRoot && !dv.mark) {
-               dv.style.display = "none"
-               fs.push(dv); dv.mark = true
+  } })
+  methods.push({ tag: document.all, filter: function(e) { 
+   if(e.shadowRoot) {
+         return true     
              } 
-       }
-     if(fs.length) { console.warn("frames blocked >> ", fs) }
-  }, 50)
+   } })
