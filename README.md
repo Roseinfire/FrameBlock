@@ -6,7 +6,7 @@
 * Open Google Chrome
 * Go to chrome://extensions
 * Enable Developer Mode
-* Click Load 'Unpacked Extension'
+* Click 'Load Unpacked'
 * Select Extracted Folder
 ### Ready, now go to the internet!
 # Conception
