@@ -1,7 +1,7 @@
 var methods = new Array()
 setInterval(function block() {
    var blocked = new Array()
-   function remove(tag, filter=function() {}) {
+   function remove(tag, filter=function() { return true }) {
       var things; (typeof tag == 'string') ? things = document.getElementsByTagName(tag) : things = tag
       for(var i = 0; i < things.length; i++) {
          if(filter(things[i])) { things[i].parentElement.removeChild(things[i]); blocked.push(things[i]) }
