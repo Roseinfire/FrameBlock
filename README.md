@@ -22,7 +22,7 @@ So, some sites will work uncorrectly:
 * Youtube
 * Google Drive
 * Github
-* Lichess
+* Lichess <br>
 Their content become less interactive or less usefull.
 Google Drive unable to download files, Github will not show icons.
 ### It's best to disable FrameBlock on Trusted Sites, but keep enabled by default.
