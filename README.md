@@ -1,5 +1,5 @@
 # FrameBlock
-## Chrome Extension which block frames.
+## Chrome Extension which remove frames
 # Usage
 * Download Zip Code
 * Exract Folder
@@ -8,18 +8,21 @@
 * Enable Developer Mode
 * Click Load 'Unpacked Extension'
 * Select Extracted Folder
-## Ready, now go to internet surfing
+### Ready, now go to the internet!
 # Conception
-FrameBlock isn't adBlock. However it blocks most of heavy and harmful advertisments.
-Ideal usage is enable extension when you want quickly read or download information.
-# Known websites may work worse
-As was said above FrameBlock is not blocks advertisment.
-It blocks frame like elements, which potencialy harmful.
-Nevertheless, some resourses use frames correctly:
+Stupid advertisment always use the same patterns.
+Even more, some of that methods now always used by stupid avdertisment.
+That's what why created FrameBlock. Just remove patterns.
+FrameBlock is not an adBlock, but it blocks most of heavy and harmful advertisments.
+Recommended usage is enable extension when you want quickly read or download information.
+# Dark side
+As explained above, FrameBlock does not block the advertisment.
+It blocks patterns, which potencialy harmful.
+So, some sites will work uncorrectly:
 * Youtube
 * Google Drive
 * Github
 * Lichess
-Their content may become less interactive or usefull.
-Google Drive will not download files, Github will not show icons.
-## We recommend to disable FrameBlock on Trusted Sites, but keep enabled by default.
+Their content become less interactive or less usefull.
+Google Drive unable to download files, Github will not show icons.
+### It's best to disable FrameBlock on Trusted Sites, but keep enabled by default.
