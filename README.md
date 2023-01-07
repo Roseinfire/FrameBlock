@@ -1,5 +1,5 @@
 # FrameBlock
-## Chrome Extension which remove frames
+## Chrome Extension which block frames
 # Usage
 * Download Zip Code
 * Extract Folder
