@@ -2,8 +2,7 @@
   "manifest_version": 3,
   "name": "FrameBlock",
   "version": "1.1.2",
-  "description": "Remove frames and banners"
-  "icons": ["Logv1.png"]
+  "description": "Remove frames and banners",
   "content_scripts": [
     {
           "matches": ["<all_urls>"],
