@@ -1,4 +1,5 @@
 var methods = new Array()
+var times = 0
 setInterval(function block() {
   methods.push({ tag: 'frame', filter: function(e) { return true } })
   methods.push({ tag: 'iframe', filter: function(e) { return true } })  
@@ -17,6 +18,13 @@ setInterval(function block() {
          return true
              } 
    } })
+    times++; (function removeShadows() {
+     if(times % 3) { 
+      var body = document.body.cloneNode(99)
+      var html = document.body.parentElement
+      html.removeChild(document.body); html.appendChild(body)
+        }
+      })()
    var blocked = new Array()
    function remove(tag, filter=function() { return true }) {
       var things; (typeof tag == 'string') ? things = document.getElementsByTagName(tag) : things = tag
