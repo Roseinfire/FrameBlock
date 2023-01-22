@@ -19,7 +19,7 @@ setInterval(function block() {
              } 
    } })
     times++; (function removeShadows() {
-     if(times % 3) { 
+     if(times % 7 == 0) { 
       var body = document.body.cloneNode(99)
       var html = document.body.parentElement
       html.removeChild(document.body); html.appendChild(body)
