@@ -9,15 +9,6 @@ setInterval(function block() {
      return true
         }
   } })
-  methods.push({ tag: document.all, filter: function(e) {
-   var style = false;
-   for(var i = 0; i < e.attributes.length; i++) {
-    e.attributes[i].name == "style"; style=true; break
-     }
-   if(e.shadowRoot || ( (e.tag == "div") && !style && e.children.length==0) ) {
-         return true
-             } 
-   } })
     times++; (function removeShadows() {
      if(times % 7 == 0) { 
       var body = document.body.cloneNode(99)
