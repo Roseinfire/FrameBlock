@@ -7,14 +7,6 @@ function insert(where, element, before) {
       }
   }
 var methods = new Array()
-      methods.push({ tag: 'frame', filter: function(e) { return true } })
-      methods.push({ tag: 'iframe', filter: function(e) { return true } })  
-      methods.push({ tag: 'yatag', filter: function(e) { return true } })
-      methods.push({ tag: 'a', filter: function(e) { 
-                  if(e.getElementsByTagName("img").length || e.getElementsByTagName("video").length) {
-                        return e
-                        }
-                  } })
       methods.push({ tag: 'div', filter: function(e) {
                 if(!e.children.length) {
                   var hand = e.parentElement
@@ -31,6 +23,14 @@ var methods = new Array()
                      }
                    } 
                 })
+      methods.push({ tag: 'frame', filter: function(e) { return true } })
+      methods.push({ tag: 'iframe', filter: function(e) { return true } })  
+      methods.push({ tag: 'yatag', filter: function(e) { return true } })
+      methods.push({ tag: 'a', filter: function(e) { 
+                  if(e.getElementsByTagName("img").length || e.getElementsByTagName("video").length) {
+                        return true
+                        }
+                  } })
 setInterval(function block() {
       var blocked = new Array()
       function remove(tag, filter=function() { return true }) {
