@@ -1,45 +1,54 @@
-function insert(where, element, before) {
- if(before) {
-   where.insertBefore(element, before)
-     }
-   else {
-     where.append(element)
-      }
-  }
-var methods = new Array()
-      methods.push({ tag: 'div', filter: function(e) {
-                if(!e.children.length) {
-                  var hand = e.parentElement
-                  var group = hand.children
-                  var place = 0
-                  while(place < group.length) {
-                     if(group[place] == e) { break }
-                     else { place++ }
+function insert(where, element, before) {        
+        /*  Insert element before its following element.
+        If following element `before` is not defined, then element is last in its group, and so just it appends */        
+        if(before) { where.insertBefore(element, before) }
+        else { where.append(element) }
+        }
+  var methods = new Array()   
+  /* An array of objects like { tag: "", filter: function(e) { return } } 
+  Elements list will be created by tag and every element of list goes through a filter as an argument. 
+  Whether `filter` returns true, element deleting from its parent. */
+  methods.push({ tag: 'div', filter: function(e) {
+              /* Checking for shadow DOM 
+              There are no methods to remove shadowRoot, however we can remove shadowRoot's parent element. 
+              The idea is to remove element and carefully replace with its clone, therefore delete shadowRoot */
+              if(!e.children.length) { // only empty divs are checking to increase the speed
+                    var hand = e.parentElement // let's remember parent element
+                    var group = hand.children // remember the group
+                    var place = 0 // define position where div is in group
+                    while(place < group.length) {
+                          if(group[place] == e) { break } // position defined, and so `break`
+                          else { place++ } // continue searching
+                    } // the position will be defined in all cases, as we know that group contains all children `hand`
+                    hand.removeChild(e) // now remove original element and replace with its clone
+                    /* Element removed from its group, so (place+1) become just (place) */
+                    insert(hand, e.cloneNode(29), group[place]) // inserting to original position
+                    return false // no need remove element
                     }
-                  hand.removeChild(e)
-                  /* element removed from its group, so place+1 become just place */
-                  insert(hand, e.cloneNode(29), group[place])
-                  return false
+              } 
+        })
+  methods.push({ tag: 'frame', filter: function(e) { return true } }) // Just remove all the frames
+  methods.push({ tag: 'iframe', filter: function(e) { return true } }) // And iframes too
+  methods.push({ tag: 'yatag', filter: function(e) { return true } }) // Removing a kind of banners
+  methods.push({ tag: 'a', filter: function(e) { // And remove banners itself
+       if(e.getElementsByTagName("img").length || e.getElementsByTagName("video").length) {
+             /* Whether the link has a child image or video, it is a banner. */
+             return true // removing
                      }
-                   } 
-                })
-      methods.push({ tag: 'frame', filter: function(e) { return true } })
-      methods.push({ tag: 'iframe', filter: function(e) { return true } })  
-      methods.push({ tag: 'yatag', filter: function(e) { return true } })
-      methods.push({ tag: 'a', filter: function(e) { 
-                  if(e.getElementsByTagName("img").length || e.getElementsByTagName("video").length) {
-                        return true
+               } 
+        })
+  setInterval(function block() { // reading methods
+           var blocked = new Array() // and array of removed elements
+            function remove(tag, filter=function() { return true }) { // remove elements by tag
+                  /* Function takes not only tag names but also an arrays */
+                  var things; (typeof tag == 'string') ? things = document.getElementsByTagName(tag) : things = tag
+                  for(var i = 0; i < things.length; i++) { // filtering items
+                        /* Whether filter is true, remember element and remove */
+                        if(filter(things[i])) { blocked.push(things[i]); things[i].parentElement.removeChild(things[i]); }
                         }
-                  } })
-setInterval(function block() {
-      var blocked = new Array()
-      function remove(tag, filter=function() { return true }) {
-            var things; (typeof tag == 'string') ? things = document.getElementsByTagName(tag) : things = tag
-            for(var i = 0; i < things.length; i++) {
-                  if(filter(things[i])) { blocked.push(things[i]); things[i].parentElement.removeChild(things[i]); }
-                  }
-            }
-      for(var i = 0; i < methods.length; i++) {
-            remove(methods[i].tag, methods[i].filter)
-            }; if(blocked.length) { console.log("frames blocked > ", blocked) }
-      }, 500)
+                    }
+             for(var i = 0; i < methods.length; i++) { // finally go through the all methods
+                    remove(methods[i].tag, methods[i].filter)
+               }; if(blocked.length) { console.log("frames blocked > ", blocked) } // and.. output the removed items
+     }, 500) // repeat every 500ms
+                
