@@ -16,23 +16,24 @@ FrameBlock does the following contributions:
 * Enable Developer Mode
 * Click 'Load Unpacked'
 * Select Extracted Folder
-### Ready, now go to the internet!
-# Conception
-Stupid advertisements always use the same patterns. <br>
-Far more, some of those methods are always used only by stupid advertisements. <br>
-That's why FrameBlock was created. Just remove patterns. <br>
-FrameBlock is not an adBlock, but it blocks a great part of heavy and harmful advertisements. <br>
-# Dark side
-As explained above, FrameBlock does not block the advertisement. <br>
-It blocks patterns, which are potentially harmful. <br>
-So, some sites will work incorrectly: 
-  * Youtube
+# Advantages
+FrameBlock `protects` from unwanted parts of web content. <br>
+Websites always become more readable and more safe. <br>
+No advertisements and promotions and of course no harmful spam. <br>
+With FrameBlock you can `keep` your screen `clean` from the worst parts of the internet.
+# Dark sides
+Apart from the more safety, you will see less animations or even loose a part of content. <br>
+Some known sites will work incorrectly:
   * Google Drive
   * Github
   * Lichess
 ### What's wrong?
-Their content becomes less interactive or less useful. <br>
-Google Drive unable to download files, Github will not show the icons. <br>
+Google Drive unable to download files, Github will not show the icons and so on. <br>
 ### Solution:
-It's best to disable FrameBlock on Trusted Sites, but keep enabled by default.
-
+It's best to disable FrameBlock by default, but enable it when going to unknown sites. <br>
+It can help quickly search information and do not share CPU for advertisements.
+# Contribution
+FrameBlock is `documented` and completely open source. <br>
+Everyone can fork the project, comment the project and contribute the project
+# License
+The `Unlicense`
