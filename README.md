@@ -35,5 +35,8 @@ It can help quickly search information and do not share CPU for advertisements.
 # Contribution
 FrameBlock is `documented` and completely open source. <br>
 Everyone can fork the project, comment the project and contribute the project
+# Support
+Well, FrameBlock is free, but how can we know how many people like the project? <br>
+Your best support is just give a star!
 # License
 The `Unlicense`
