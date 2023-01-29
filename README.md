@@ -32,11 +32,11 @@ Google Drive unable to download files, Github will not show the icons and so on.
 ### Solution:
 It's best to disable FrameBlock by default, but enable it when going to unknown sites. <br>
 It can help quickly search information and do not share CPU for advertisements.
-# Contribution
-FrameBlock is `documented` and completely open source. <br>
-Everyone can fork the project, comment the project and contribute the project
 # Support
 Well, FrameBlock is free, but how can we know how many people like the project? <br>
 Your best support is just give a star!
+# Contribution
+FrameBlock is `documented` and completely open source. <br>
+Everyone can fork the project, comment the project and contribute the project
 # License
-The `Unlicense`
+The `Unlicense` license
