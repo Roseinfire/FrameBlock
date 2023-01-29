@@ -1,3 +1,4 @@
+![](https://raw.githubusercontent.com/Roseinfire/FrameBlock/main/Frameblock.png)
 # Intro
 ### Chrome Extension which block frames
 Did you know advertisements take up to 40% of your screen? <br>
