@@ -18,7 +18,7 @@ FrameBlock does the following contributions:
 * Select Extracted Folder
 # Advantages
 FrameBlock `protects` from unwanted parts of web content. <br>
-Websites always become more readable and more safe. <br>
+Websites become more readable and more safe. <br>
 Protection accesses you quickly search information and don't worry about harmful content. <br>
 Frameblock works `where usual` adblocks are `powerless`
 # Problems
@@ -27,7 +27,7 @@ As a result, you may see less animations or even lose a part of the content. <br
 Don't worry, you can report the problem if it is worth so.
 # Contribution
 FrameBlock is `documented` and completely open source. <br>
-Everyone can fork the project, comment on the project and contribute to the project.
+Everyone can fork the repository, comment on the project and contribute to the project.
 # Support
 Well, FrameBlock is free, but how can we know how many people like the project? <br>
 Let us know your opinion and `give` the project a `star`, if you like our work.
