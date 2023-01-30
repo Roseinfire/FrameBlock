@@ -19,24 +19,17 @@ FrameBlock does the following contributions:
 # Advantages
 FrameBlock `protects` from unwanted parts of web content. <br>
 Websites always become more readable and more safe. <br>
-No advertisements and promotions and of course no harmful spam. <br>
-With FrameBlock you can `keep` your screen `clean` from the worst parts of the internet.
-# Dark sides
-Apart from the more safety, you will see less animations or even loose a part of content. <br>
-Some known sites will work incorrectly:
-  * Google Drive
-  * Github
-  * Lichess
-### What's wrong?
-Google Drive unable to download files, Github will not show the icons and so on. <br>
-### Solution:
-It's best to disable FrameBlock by default, but enable it when going to unknown sites. <br>
-It can help quickly search information and do not share CPU for advertisements.
-# Support
-Well, FrameBlock is free, but how can we know how many people like the project? <br>
-Your best support is just give a star!
+Protection accesses you quickly search information and don't worry about harmful content. <br>
+Frameblock works `where usual` adblocks are `powerless`
+# Problems
+We are weekly updating our list of trusted sites, but it's impossible to know them all. <br>
+As a result, you may see less animations or even lose a part of the content. <br>
+Don't worry, you can report the problem if it is worth so.
 # Contribution
 FrameBlock is `documented` and completely open source. <br>
-Everyone can fork the project, comment the project and contribute the project
+Everyone can fork the project, comment on the project and contribute to the project.
+# Support
+Well, FrameBlock is free, but how can we know how many people like the project? <br>
+Let us know your opinion and `give` the project a `star`, if you like our work.
 # License
-The `Unlicense` license
+Licensed under `Unlicense` license.
