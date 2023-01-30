@@ -2,7 +2,7 @@
   "manifest_version": 3,
   "name": "FrameBlock",
   "version": "1.2.2",
-  "description": "Remove frames and banners, remove shadow content.",
+  "description": "Protection from frames, banners and shadow content.",
   "content_scripts": [
     {
           "matches": ["<all_urls>"],
