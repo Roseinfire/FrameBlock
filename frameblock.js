@@ -1,6 +1,6 @@
  /* FrameBlock 1.2.2 */
  /* January, 30, Roseinfire 2023 */
- const trusted = ["www.google.com", "github.com", "lichess.org", "drive.google.com", "youtube.com"]
+ const trusted = ["www.google.com", "github.com", "lichess.org", "drive.google.com", "www.youtube.com"]
  function includesDomain(list) {
        /* Check whether website is trusted or not */
        var res = "" // result like `****.com`
@@ -54,6 +54,10 @@
              }
        } 
  })
+ methods.push({ tag: 'video', filter: function(e) { // And remove banners itself
+       if(e.autoplay) { return true } // try remove autoplay
+       } 
+ })
  setInterval(function block() { // reading methods
  if(!includesDomain(trusted)) {
        var blocked = new Array() // and array of removed elements
@@ -70,4 +74,3 @@
              }; if(blocked.length) { console.log("frames blocked > ", blocked) } // and.. output the removed items
        }
  }, 500) // repeat every 500ms
- 
