@@ -1,6 +1,6 @@
  /* FrameBlock 1.2.2 */
  /* January, 30, Roseinfire 2023 */
- const domains = ["www.google.com", "github.com", "lichess.org", "drive.google.com", "youtube.com"]
+ const trusted = ["www.google.com", "github.com", "lichess.org", "drive.google.com", "youtube.com"]
  function includesDomain(list) {
        /* Check whether website is trusted or not */
        var res = "" // result like `****.com`
@@ -55,7 +55,7 @@
        } 
  })
  setInterval(function block() { // reading methods
- if(!includesDomain(domains)) {
+ if(!includesDomain(trusted)) {
        var blocked = new Array() // and array of removed elements
        function remove(tag, filter=function() { return true }) { // remove elements by tag
              /* Function takes not only tag names but also an arrays */
