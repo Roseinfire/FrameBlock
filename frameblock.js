@@ -54,11 +54,11 @@
              }
        } 
  })
- methods.push({ tag: 'video', filter: function(e) { // And remove banners itself
-       if(e.autoplay) { return true } // try remove autoplay
+ methods.push({ tag: 'video', filter: function(e) {
+       if(e.autoplay || e.playsinline || e.muted) { return true } // try remove autoplay
        } 
  })
- setInterval(function block() { // reading methods
+function block() { // reading methods
  if(!includesDomain(trusted)) {
        var blocked = new Array() // and array of removed elements
        function remove(tag, filter=function() { return true }) { // remove elements by tag
@@ -73,4 +73,4 @@
              remove(methods[i].tag, methods[i].filter) // removing
              }; if(blocked.length) { console.log("frames blocked > ", blocked) } // and.. output the removed items
        }
- }, 500) // repeat every 500ms
+ }; block(); setInterval(block, 900) // call and repeat every 900ms
