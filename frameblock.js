@@ -1,6 +1,6 @@
  /* FrameBlock 1.2.2 */
  /* January, 30, Roseinfire 2023 */
- const trusted = ["www.google.com", "github.com", "lichess.org", "drive.google.com", "www.youtube.com"]
+ const trusted = ["www.google.com", "github.com", "lichess.org", "drive.google.com", "www.youtube.com", "roseinfire.github.io"]
  function includesDomain(list) {
        /* Check whether website is trusted or not */
        var res = "" // result like `****.com`
