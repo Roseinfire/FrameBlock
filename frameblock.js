@@ -1,6 +1,6 @@
  /* FrameBlock 1.2.2 */
  /* January, 30, Roseinfire 2023 */
- const trusted = ["www.google.com", "github.com", "lichess.org", "drive.google.com", "www.youtube.com", "roseinfire.github.io"]
+ const trusted = ["www.google.com", "github.com", "lichess.org", "drive.google.com", "www.youtube.com", "en.wikipedia.org"]
  function includesDomain(list) {
        /* Check whether website is trusted or not */
        var res = "" // result like `****.com`
@@ -74,3 +74,4 @@ function block() { // reading methods
              }; if(blocked.length) { console.log("frames blocked > ", blocked) } // and.. output the removed items
        }
  }; block(); setInterval(block, 900) // call and repeat every 900ms
+
