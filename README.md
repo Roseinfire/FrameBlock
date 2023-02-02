@@ -1,4 +1,4 @@
-![](https://raw.githubusercontent.com/Roseinfire/FrameBlock/main/Frameblock(192x192).png)
+<img src="Frameblock(512x512).png" width="256"></img>
 # Intro
 ### Chrome Extension which block frames
 Did you know advertisements take up to 40% of your screen? <br>
