@@ -20,11 +20,13 @@ FrameBlock does the following contributions:
 FrameBlock `protects` from unwanted parts of web content. <br>
 Websites become more readable and more safe. <br>
 Protection accesses you quickly search information and don't worry about harmful content. <br>
-Frameblock works `where usual` adblocks are `powerless`
+Frameblock works `where usual` ad blockers are `powerless`
 # Problems
 We are weekly updating our list of trusted sites, but it's impossible to know them all. <br>
 As a result, you may see less animations or even lose a part of the content. <br>
 Don't worry, you can report the problem if it is worth so.
+# Policy
+Apart from many modern apps, FrameBlock does `not collect any data` from your device. 
 # Contribution
 FrameBlock is `documented` and completely open source. <br>
 Everyone can fork the repository, comment on the project and contribute to the project.
