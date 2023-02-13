@@ -1,7 +1,8 @@
 
     /* FrameBlock 1.2.3 */
     /* February 12, Roseinfire 2023 */
-    const trusted = ["&google.com", "github.com", "lichess.org", "&youtube.com", "&wikipedia.org"]
+    let trusted = ["&google.com", "github.com", "lichess.org", "&youtube.com", "&wikipedia.org"]
+    trusted.push("roseinfire.github.io") // Roseinfire itself never uses advertisements
     function includesDomain(list) {
         /* Check whether the website is known and trusted or is not.*/
         var doc = document.URL // shortcut the document.URL
