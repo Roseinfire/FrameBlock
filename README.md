@@ -16,14 +16,17 @@ FrameBlock does the following contributions:
 * Click 'Load Unpacked'
 * Select Extracted Folder
 # Advantages
-FrameBlock `protects` from unwanted parts of web content. <br>
-Websites become more readable and more safe. <br>
-Protection accesses you quickly search information and don't worry about harmful content. <br>
-Frameblock works `where usual` ad blockers are `powerless`
+FrameBlock provides maximum safety by just excluding harmful patterns. <br>
+It `protects` from unwanted parts of web content such advertisements and video. <br>
+Websites become more readable and more safe. Protection accesses you <br>
+quickly search and get information where it is impossible to read. <br>
+Frameblock frequently works `where usual` ad blockers are `powerless`
 # Problems
-We are weekly updating our list of trusted sites, but it's impossible to know them all. <br>
-As a result, you may see less animations or even lose a part of the content. <br>
-Don't worry, you can report the problem if it is worth so.
+Of course, you can lose a part of the content, because FrameBlock does not support web apps. <br>
+We can exclude the most popular ones from from the list of sites which affected by FrameBlock <br>
+and weekly updating our list of trusted sites, but it's impossible to know them all. <br>
+As a result, you may see less animations or even lose functionality. <br>
+However, you can report the problem if you think the website is worth so.
 # Policy
 Apart from many modern apps, FrameBlock does `not collect any data` from your device. 
 # Contribution
@@ -34,3 +37,4 @@ Well, FrameBlock is free, but how can we know how many people like the project? 
 Let us know your opinion and `give` the project a `star`, if you like our work.
 # License
 Licensed under `Unlicense` license.
+
