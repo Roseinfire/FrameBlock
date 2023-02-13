@@ -4,12 +4,12 @@
     const trusted = ["&google.com", "github.com", "lichess.org", "&youtube.com", "&wikipedia.org"]
     function includesDomain(list) {
         /* Check whether the website is known and trusted or is not.*/
-        var res = "" // result like ‘****.com’
-        var host = "" // host like ‘http://’
         var doc = document.URL // shortcut the document.URL
-        var zone = 0 // how many symbols “/” are in ‘doc’
-        var skip = false // get all domains owned by service (such www.google.com)
+        var host = "" // host like ‘http://’
+        var res = "" // result like ‘****.com’
         for(var e = 0; e < list.length; e++) {
+            var zone = 0 // how many symbols “/” are in ‘doc’
+            var skip = false // get all domains owned by service (such www.google.com)
             if(list[e][0] == "&") { skip = true }
             for(var i = 0; i < doc.length; i++) { // let's read the 'doc'
                 if(doc[i] == "/") { zone++ } // count symbols “/”             
@@ -17,17 +17,18 @@
                 else if(zone > 1 && zone < 3 && !skip) { res += doc[i] } // build result
                 if(doc[i] == "." && skip) { skip = false } // skip all chars before first dot if required
                 }
-            var short =  ""
+            var short =  "";
             while(short.length+1 < list[e].length) { short += list[e][short.length+1] } // get name without the first symbol
             var item = (list[e][0] == "&") ? (short) : list[e] // get correct name
             if(item == res) { return true } // is result equals to selected item return true
+            res = ""
             }; return false
         };
 
    function insert(where, element, before) {
         /* 
         Insert element before its following element.
-       Whether following element `before` is not defined, then element is last in its group, and so just it appends.
+       Whether the following element `before` is not defined, then the element is last in its group, and so it just appends.
         */        
         if(before) { where.insertBefore(element, before) }
         else { where.append(element) }
@@ -74,9 +75,10 @@
             if(e.autoplay || e.playsinline || e.muted) { return true } // try remove autoplay
             } 
         })
-    function block() { // reading methods
-        if(!includesDomain(trusted)) {
-            var blocked = new Array() // and array of removed elements
+    function block(includes_domain=null) { // reading methods
+        if(includes_domain==false || block.target) { // whether domain not found
+            block.target = true // indicate that domain not found
+            var blocked = new Array() // create an array of removed elements
             function remove(tag, filter=function() { return true }) { // remove elements by tag
                 /* Function takes not only tag names but also an arrays */
                 var things; (typeof tag == 'string') ? things = document.getElementsByTagName(tag) : things = tag
@@ -88,9 +90,9 @@
             for(var i = 0; i < methods.length; i++) { // finally go through the all methods
                 remove(methods[i].tag, methods[i].filter) // removing
                 }; if(blocked.length) { console.log("frames blocked > ", blocked) } // and.. output the removed items
-            }
+             } else if(includes_domain == true) { console.log("Good website!") }
+           setTimeout(function() { if(block.target == true) { block() } }, 900) // repeat every 900 ms
         };
 
-   block(); setInterval(block, 900) // call and repeat every 900ms
-    
-    
+    block( includesDomain(trusted) ) // just call function
+
