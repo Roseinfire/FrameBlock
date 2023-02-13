@@ -1,6 +1,6 @@
 
-    /* FrameBlock 1.2.3 */
-    /* February 12, Roseinfire 2023 */
+    /* FrameBlock 1.2.4 */
+    /* February 13, Roseinfire 2023 */
     let trusted = ["&google.com", "github.com", "lichess.org", "&youtube.com", "&wikipedia.org"]
     trusted.push("roseinfire.github.io") // Roseinfire itself never uses advertisements
     function includesDomain(list) {
